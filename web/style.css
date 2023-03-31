@@ -1,0 +1,210 @@
+* {
+    overflow: hidden;
+    user-select: none;
+    
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    /* background: #303030; */
+    background: linear-gradient(156deg, rgba(100, 100, 100, 0.4) 0%, rgba(16, 138, 238, 0.2) 65%, rgba(10, 101, 204, 0.35) 100%);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.button-container {
+    /* background-color: rgba(0, 0, 255, 0.096); */
+    position: absolute;
+    height: 17vh;
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+}
+
+.button {
+    /* display: none; */
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 5vh;
+    transition: all .3s ease;
+    animation-name: unclepear;
+    animation-duration: .8s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    text-align: center;
+    text-shadow: 0 0 0.9vh rgba(0, 0, 0, 0.658);
+    padding-left: 0.3vh;
+    padding-right: 0.3vh;
+    /* opacity: 0; */
+
+}
+
+.button:hover {
+    color: rgb(168, 168, 168);
+    transform: translate(0, -1.2vh);
+}
+
+@keyframes unclepear {
+    from {
+        /* opacity: 0; */
+        transform: translate(0, 25vh);
+    }
+
+    to {
+        /* opacity: 1; */
+        transform: translate(0, 0);
+    }
+}
+
+.logo {
+    /* display: none; */
+    position: absolute;
+    height: 25vh; width: 25vh;
+    /* background-color: blue; */
+    background-image: url('');
+    background-size: contain;
+    animation: ziopesca 2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 normal;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -85%);
+}
+
+@keyframes ziopesca {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -300%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -85%);
+    }
+}
+
+.close-container {
+    display: none;
+    color: white;
+    /* background: linear-gradient(160deg, rgba(37, 108, 150, 0.85), rgba(5, 27, 70, 0.85)); */
+    /* background: #fff; */
+    /* box-shadow: rgba(24, 57, 165, 0.3) 0.1vh -1vh 7vh 1.5vh; */
+    /* box-shadow: rgba(0, 0, 0, 0.555) 0.1vh -1vh 7vh 1.5vh; */
+    padding: 8vh;
+    border-radius: 2vh;
+    height: 1vh;
+    width: 30vh;
+    position: absolute;
+    /* top: 50%; */
+    /* border: 3px solid rgba(189, 8, 8, 0.7); */
+    /* background-color: rgba(196, 0, 0, 0.315); */
+    background-color: rgba(231, 0, 0, 0.589);
+    /* top: 2vh; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ziobanana 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 normal;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    /* border: 1px solid rgba(10, 114, 155, 0.705); */
+    /* border: 2px solid rgba(255, 255, 255, 0.8); */
+}
+
+@keyframes ziobanana {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -350%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#back {
+    position: absolute;
+    top: 1vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 2.5vh;
+    transition: all .3s ease;
+    cursor: pointer;
+    border: 1px solid rgb(155, 155, 155);
+    font-family: sans-serif;
+    /* width: 3.1vh; */
+    /* height: 3.1vh; */
+    border-radius: 100vh;
+    padding: 1vh 1.2vh;
+    font-weight: lighter;
+    margin-bottom: 4vh;
+}
+
+#back:hover {
+    color: rgb(209, 209, 209);
+    background-color: rgba(22, 133, 236, 0.7);
+    border-color: rgba(22, 133, 236, 0.7);
+    transform: translate(-50%, 0.15vh);
+}
+
+#whataction {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: max-content;
+    transform: translate(-50%, 0);
+    /* background-color: blue; */
+    /* margin-bottom: 6.4vh; */
+    font-size: 2.75vh;
+}
+
+.quitbuttons {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1vh;
+    font-size: 2.2vh;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    min-height: max-content;
+    width: max-content;
+    height: 5.5vh;
+    /* background-color: orange; */
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.quitbutton {
+    color: white;
+    letter-spacing: 0.08vh;
+    cursor: pointer;
+    transition: all .3s ease;
+    padding: 0.8vh 1.6vh;
+    font-family: sans-serif;
+    font-weight: lighter;
+    border-radius: 100vh;
+    border: 1px solid #d3d3d3;
+    /* background-color: red; */
+}
+
+.quitbutton:hover {
+    color: rgb(226, 226, 226);
+    border-color: rgba(235, 44, 11, 0.8);
+    background: rgba(235, 44, 11, 0.8);
+    transform: translateY(-0.15vh);
+}
