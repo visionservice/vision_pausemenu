@@ -78,6 +78,7 @@ body {
     /* background-color: blue; */
     background-image: url('');
     background-size: contain;
+    background-repeat: no-repeat;
     animation: ziopesca 2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 normal;
     top: 50%; left: 50%;
     transform: translate(-50%, -85%);
