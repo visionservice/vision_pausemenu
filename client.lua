@@ -7,6 +7,7 @@ RegisterCommand('openpausemenu', function()
             SendNUIMessage({
                 active = true
             })
+            DisplayRadar(false)
             SetNuiFocus(true, true)
             Wait(700)
         end
@@ -43,6 +44,7 @@ end)
 RegisterNUICallback('close', function()
     if focus == true then
         SetNuiFocus(false, false)
+        DisplayRadar(true)
         Wait(700)
         focus = false
     end
@@ -54,6 +56,7 @@ RegisterNUICallback('map', function()
     while not IsFrontendReadyForControl() do Wait(0) end
     Wait(20)
     PauseMenuceptionGoDeeper(1000)
+    DisplayRadar(true)
     SetNuiFocus(false, false)
     Wait(400)
     focus = false
@@ -62,6 +65,7 @@ end)
 RegisterNUICallback('options', function()
     Wait(300)
     ActivateFrontendMenu(GetHashKey('FE_MENU_VERSION_LANDING_MENU'),0,-1)
+    DisplayRadar(true)
     SetNuiFocus(false, false)
     Wait(400)
     focus = false
@@ -69,11 +73,14 @@ end)
 
 RegisterNUICallback('disconnect', function()
     Wait(300)
+    DisplayRadar(true)
+    SetNuiFocus(false, false)
     TriggerServerEvent('vs_pausemenu:disconnect')
 end)
 
 RegisterNUICallback('quit', function()
     Wait(300)
+    DisplayRadar(true)
     SetNuiFocus(false, false)
     ForceSocialClubUpdate()
 end)
