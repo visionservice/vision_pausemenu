@@ -1,17 +1,17 @@
 let isQuitPopupOpen = false
 
 $('#button-resume').click(function() {
-    $.post('https://vs_pausemenu/close');
+    $.post('https://vision_pausemenu/close');
     $('.container').fadeOut();
 })
 
 $('#button-map').click(function() {
-    $.post('https://vs_pausemenu/map');
+    $.post('https://vision_pausemenu/map');
     $('.container').fadeOut();
 })
 
 $('#button-options').click(function() {
-    $.post('https://vs_pausemenu/options');
+    $.post('https://vision_pausemenu/options');
     $('.container').fadeOut();
 })
 
@@ -34,17 +34,17 @@ $('#back').click(function() {
 })
 
 $('#quitserver').click(function() {
-    $.post('https://vs_pausemenu/disconnect');
+    $.post('https://vision_pausemenu/disconnect');
     $('.container').fadeOut();
 })
 
 $('#quitgame').click(function() {
-    $.post('https://vs_pausemenu/quit');
+    $.post('https://vision_pausemenu/quit');
     $('.container').fadeOut();
 })
 
 $(document).ready(function() {
-    $.post('https://vs_pausemenu/loadtranslation');
+    $.post('https://vision_pausemenu/loadtranslation');
 });
 
 window.addEventListener("message", function(e) {
@@ -76,7 +76,7 @@ $(document).keydown(function(e) {
                 $('.logo').fadeIn();
             }, 300);
         } else {
-            $.post('https://vs_pausemenu/close');
+            $.post('https://vision_pausemenu/close');
             $('.container').fadeOut();
             setTimeout(() => {
                 $('.close-container').fadeOut();
